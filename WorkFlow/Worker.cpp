@@ -1,6 +1,4 @@
 #include<iostream>
 #include "Worker.h"
 
-void checkRW() {
-	
-}
+int Common::Worker::count = 0;

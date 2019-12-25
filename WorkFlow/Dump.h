@@ -1,7 +1,6 @@
 #pragma once
 #include "Worker.h"
-#include "Inter.h"
-class Dump : public Common::Worker,public G::Inter
+class Dump : public Common::Worker
 {
 public:
 	Dump() = default;

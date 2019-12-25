@@ -1,7 +1,6 @@
 #pragma once
 #include "Worker.h"
-#include "Inter.h"
-class Grep : public Common::Worker,public G::Inter
+class Grep : public Common::Worker
 {
 public:
 	Grep() = default;

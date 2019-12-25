@@ -1,7 +1,6 @@
 #pragma once
 #include "Worker.h"
-#include "Inter.h"
-class Write : public Common::Worker,public G::Inter
+class Write : public Common::Worker
 {
 public:
 	Write() = default;

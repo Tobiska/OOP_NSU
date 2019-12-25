@@ -1,7 +1,6 @@
 #pragma once
 #include "Worker.h"
-#include "Inter.h"
-class Replace : public Common::Worker,public G::Inter
+class Replace : public Common::Worker
 {
 public:
 	Replace() = default;

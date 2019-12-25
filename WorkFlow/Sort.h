@@ -1,8 +1,7 @@
 
 #pragma once
 #include "Worker.h"
-#include "Inter.h"
-class Sort : public Common::Worker,public G::Inter
+class Sort : public Common::Worker
 {
 public:
 	Sort() = default;

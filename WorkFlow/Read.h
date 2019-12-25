@@ -1,7 +1,6 @@
 #pragma once
 #include "Worker.h"
-#include "Inter.h"
-class Read : public Common::Worker,public G::Inter
+class Read : public Common::Worker
 {
 public:
 	Read() = default;

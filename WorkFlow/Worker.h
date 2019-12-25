@@ -9,7 +9,7 @@ namespace Common
 
 		~Worker() = default;
 	
-		//static int count;
+		static int count;
 
 	};
 }

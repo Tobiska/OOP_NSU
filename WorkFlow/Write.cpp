@@ -1,6 +1,5 @@
 #include "Write.h"
 #include "BlockMaker.h"
-#include "Inter.h"
 static BlockMaker<Write> writefileMaker("writefile");
 
 std::string Write::work(const std::string& text, const std::vector<std::string>& data)
