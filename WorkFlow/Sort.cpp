@@ -7,11 +7,11 @@ static BlockMaker<Sort> sortMaker("sort");
 std::string Sort::work(const std::string& text, const std::vector<std::string>& data)
 {
 	if (count != 1) {
-		throw std::exception("EXEPRION: invalid readblock and writeblock count");
+		throw MyException("EXEPRION: invalid readblock and writeblock count","Sort.cpp");
 	}
 	if (text.empty() || !data.empty())
 	{
-		throw std::exception("EXCEPTION: invalid arguments for sort");
+		throw MyException("EXCEPTION: invalid arguments for sort", "Sort.cpp");
 	}
 	std::string resultStr, tmp = "";
 	std::vector<std::string> vec;

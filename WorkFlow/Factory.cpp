@@ -1,6 +1,6 @@
 #include "Factory.h"
 #include <iostream>
-
+#include "MyException.h"
 using namespace Common;
 
 Factory& Factory::Object()
@@ -23,7 +23,7 @@ void Common::Factory::registerBlock(std::string newBlockName, IntBlockMaker* new
 {
 	if (_blockMap.find(newBlockName) != _blockMap.end())
 	{
-		throw new std::exception("error, multiple makers for this block name");
+		throw MyException("EXCEPTION: multiple makers for this block name","Factory.cpp");
 	}
 	_blockMap[newBlockName] = newBlock;
 }

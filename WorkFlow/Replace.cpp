@@ -6,11 +6,11 @@ static BlockMaker<Replace> replaceMaker("replace");
 std::string Replace::work(const std::string &text, const std::vector<std::string> &data)
 {
 	if (count != 1) {
-		throw std::exception("EXEPRION: invalid readblock and writeblock count");
+		throw MyException("EXEPRION: invalid readblock and writeblock count","Replace.cpp");
 	}
 	if (text.empty() || data.empty() || data.size() > 2)
 	{
-		throw new std::exception("EXCEPTION: invalid arguments for replace");
+		throw MyException("EXCEPTION: invalid arguments for replace","Replace.cpp");
 	}
 	std::string word1 = data[0], word2 = data[1];
 	std::string tmp = text;

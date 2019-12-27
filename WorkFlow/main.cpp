@@ -10,8 +10,9 @@ int main()
 	try {
 		wf.start("workflow.txt");
 	}
-	catch (std::exception &ex) {
-		std::cerr << ex.what();
+	catch (MyException &ex) {
+		std::cerr << ex.what() << ex.number_or_id() << std::endl;
+		std::cerr << ex.WFile();
 	}
 	return 0;
 }

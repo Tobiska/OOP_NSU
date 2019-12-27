@@ -1,5 +1,6 @@
 #pragma once
 #include "Workflow.h"
+#include "MyException.h"
 namespace Common
 {
 	class Worker

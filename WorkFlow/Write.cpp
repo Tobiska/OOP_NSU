@@ -1,11 +1,12 @@
 #include "Write.h"
 #include "BlockMaker.h"
+#include "MyException.h"
 static BlockMaker<Write> writefileMaker("writefile");
 
 std::string Write::work(const std::string& text, const std::vector<std::string>& data)
 {
 	if (count < 0) {
-		throw std::exception("EXEPRION: invalid readblock and writeblock count  (Write)");
+		throw MyException("EXCEPTION: invalid Write and Read count","Write.cpp");
 	}
 
 	count--;
@@ -14,7 +15,7 @@ std::string Write::work(const std::string& text, const std::vector<std::string>&
 
 	if (!out.is_open())
 	{
-		throw std::exception("EXCEPTION: can't open file");
+		throw MyException("EXCEPTION: can't open file", "Write.cpp");
 	}
 	out << text;
 
