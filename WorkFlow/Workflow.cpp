@@ -2,6 +2,7 @@
 #include "Parser.h"
 #include "Factory.h"
 #include <algorithm>
+#include "MyException.h"
 
 using namespace Common;
 
@@ -40,6 +41,9 @@ void WorkFlow::start(std::string fileName)
 			{
 				Worker* command = factory.createBlock(parsedData[keys[j]][0]);
 				result = command->work(result, std::vector<std::string>(parsedData[keys[j]].begin() + 1, parsedData[keys[j]].end()));
+				if (it == parsedSequence.size() - 1) { if (command->count != 0) {
+					throw MyException("EXCEPTION:invalid read and write blocks counts","Workflow.cpp");
+				} }
 				delete command;
 				break;
 			}
